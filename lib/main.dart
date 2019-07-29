@@ -464,7 +464,7 @@
 //}
 
 //TODO GridView 网格列表练习--两种写法
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 void main()=>runApp(MyApp(items:new List<String>.generate(70, (i)=>"Item $i")));
 
 class MyApp extends StatelessWidget{
@@ -512,6 +512,334 @@ class MyApp extends StatelessWidget{
           new Text('我是文字')
         ],
       ),
+      ),
+    );
+  }
+}*/
+
+//TODO 这是复习GridVie
+//import 'package:flutter/material.dart';
+//void main()=>runApp(MyApp());
+//
+//class MyApp extends StatelessWidget {
+//  @override
+//  Widget build(BuildContext context) {
+//    return MaterialApp(
+//      title: 'GridView练习',
+//      home: Scaffold(
+//        appBar: new AppBar(
+//          title: new Text(
+//              '这是复习GridView',
+//            textAlign: TextAlign.center,//居中
+////          TextAlign属性
+////          TextAlign属性就是文本的对齐方式，它的属性值有如下几个：
+////          center: 文本以居中形式对齐,这个也算比较常用的了。
+////          left:左对齐，经常使用，让文本居左进行对齐，效果和start一样。
+////          right :右对齐，使用频率也不算高。
+////          start:以开始位置进行对齐，类似于左对齐。
+////          end: 以为本结尾处进行对齐，不常用。有点类似右对齐.
+//
+//            maxLines: 2,//设置最多显示的行数，比如我们现在只显示1行
+//
+////          overflow属性
+////          overflow属性是用来设置文本溢出时，如何处理,它有下面几个常用的值供我们选择。
+////          clip：直接切断，剩下的文字就没有了，感觉不太友好，体验性不好。
+////          ellipsis:在后边显示省略号，体验性较好，这个在工作中经常使用。
+////          fade: 溢出的部分会进行一个渐变消失的效果，当然是上线的渐变，不是左右的哦。
+//            overflow: TextOverflow.ellipsis,
+//
+//
+//            style: TextStyle(
+//              fontSize: 18.0,
+//              color: Colors.redAccent,
+//              backgroundColor: Colors.greenAccent,
+//              decoration: TextDecoration.underline//下划线
+//            ),
+//          ),
+//        ),
+//        body: GridView.count(
+//          crossAxisCount: 3,
+//          crossAxisSpacing: 10.0,
+//          childAspectRatio: 0.7,
+//          children: <Widget>[
+//            new Image.network('http://img5.mtime.cn/mt/2019/07/17/173708.85525823_180X260X4.jpg',fit: BoxFit.cover),
+//            new Image.network('http://img5.mtime.cn/mt/2019/07/17/173708.85525823_180X260X4.jpg',fit: BoxFit.cover),
+//            new Container(
+//              child: Text('我是马龙'),
+//              alignment: Alignment.center,
+//            ),
+//            new Image.network('http://img5.mtime.cn/mt/2019/07/17/173708.85525823_180X260X4.jpg',fit: BoxFit.cover),
+//            new Image.network('http://img5.mtime.cn/mt/2019/07/17/173708.85525823_180X260X4.jpg',fit: BoxFit.cover),
+//            new Image.network('http://img5.mtime.cn/mt/2019/07/17/173708.85525823_180X260X4.jpg',fit: BoxFit.cover)
+//          ],
+//        ),
+//      ),
+//    );
+//  }
+//}
+
+//TODO 水平布局 灵活与不灵活的 ROW 练习
+//import 'package:flutter/material.dart';
+//void main()=>runApp(MyApp());
+//
+//class MyApp extends StatelessWidget{
+//  @override
+//  Widget build (BuildContext context){
+//    return MaterialApp(
+//      title: '水平布局 灵活与不灵活的 ROW 练习',
+//      home: Scaffold(
+//        appBar: new AppBar(
+//          title: new Text('水平布局 灵活与不灵活的 ROW 练习'),
+//        ),
+////        body: new Row(//这是不灵活 ROW
+////          children: <Widget>[
+////            new RaisedButton(
+////              onPressed: (){
+////
+////              },
+////              color: Colors.blueAccent,
+////              child: new Text('我是亮蓝按钮'),
+////            ),
+////            new RaisedButton(
+////                onPressed: (){
+////
+////                },
+////              color: Colors.greenAccent,
+////              child: new Text('我是亮绿按钮'),
+////            ),
+////            new RaisedButton(
+////                onPressed: (){
+////
+////                },
+////              color: Colors.redAccent,
+////              child: new Text('我是亮红'),
+////            )
+////          ],
+////        ),
+//      body: new Row(// 这是灵活 ROW  布局，添加 Expanded 属性
+//        children: <Widget>[
+////          Expanded(child: new RaisedButton(
+////              onPressed: (){
+////
+////              },
+////               color: Colors.blueAccent,
+////              child: new Text('我是按钮'),
+////            )
+////          ),
+//          Expanded(child: new RaisedButton(
+//              onPressed: (){
+//
+//              },
+//              color: Colors.redAccent,
+//              child: new Text('我是一个大大的的的的的按钮我是一个大大的的的的的按钮我是一个大大的的的的的按钮'),
+//            )
+//          ),
+////          Expanded(child: new RaisedButton(
+////              onPressed: (){
+////
+////              },
+////              color: Colors.lightGreen,
+////              child: new Text('我是按钮'),
+////            )
+////          ),
+//          new Text('这是马龙'),
+//          new RaisedButton(onPressed: (){},color: Colors.redAccent,child: new Text('哈哈'),)
+//        ],
+//      ),
+//      ),
+//    );
+//  }
+//}
+
+//TODO 垂直布局 Column 组件练习
+//import 'package:flutter/material.dart';
+//void main()=>runApp(MyApp());
+//
+//class MyApp extends StatelessWidget{
+//  @override
+//  Widget build(BuildContext context) {
+//    return MaterialApp(
+//      title: '垂直布局 Column 组件练习',
+//      home: Scaffold(
+//        appBar: AppBar(
+//          title: Text('垂直布局 Column 组件练习'),
+//        ),
+//        body: Column(
+////            CrossAxisAlignment.star：居左对齐。
+////            CrossAxisAlignment.end：居右对齐。
+////          CrossAxisAlignment.center：居中对齐。
+//          crossAxisAlignment: CrossAxisAlignment.center,//对齐方式
+//          mainAxisAlignment: MainAxisAlignment.center,
+//          children: <Widget>[
+////            new RaisedButton(onPressed: (){},color: Colors.redAccent,child: Text('第一个')),
+////            new RaisedButton(onPressed: (){},color: Colors.lightGreen,child: Text('第二个')),
+////            Expanded(child : new RaisedButton(onPressed: (){},color: Colors.purple,child: Text('第四个第四个第四个第四第四个第四个第四个第四个第四个第四个第四个个第四个第四个第四个'))),
+////            new RaisedButton(onPressed: (){},color: Colors.lightBlue,child: Text('第三个')),
+//              Center(child:new Text('你好')),
+//              Expanded(child:Center(child:new Text('awiosucbsicjdns都三合适的环境女厨师大力三i阿萨德 ',textAlign: TextAlign.center))),
+//              new Text('布嘎斯吃撒好地方词语'),
+//          ],
+//        ),
+//      ),
+//    );
+//  }
+//}
+
+//TODO 层叠布局 Stack 组件练习
+//import 'package:flutter/material.dart';
+//void main()=>runApp(MyApp());
+//
+//class MyApp extends StatelessWidget {
+//  @override
+//  Widget build(BuildContext context) {
+//
+//
+//    Stack stack = new Stack(
+//      alignment: const FractionalOffset(0.5, 0.9),
+//      children: <Widget>[
+//        new CircleAvatar(backgroundImage: new NetworkImage('http://img5.mtime.cn/mt/2019/07/17/173708.85525823_180X260X4.jpg'),radius: 150.0),
+//        new Container(
+//          child: new Text('马龙'),
+//          decoration: new BoxDecoration(
+//              color: Colors.white,
+//              border: Border.all(color: Colors.purple,width:0.5,)
+//            ),
+//          padding: EdgeInsets.all(5.0)
+//        )
+//      ],
+//    );
+//
+//
+//    return MaterialApp(
+//      title: '层叠布局 Stack 组件练习',
+//      home: Scaffold(
+//        appBar: AppBar(
+//          title: Text('层叠布局 Stack 组件练习'),
+//        ),
+////        body: Stack(
+////            children: <Widget>[
+////               Center (child:new Image.network('http://img5.mtime.cn/mt/2019/07/17/173708.85525823_180X260X4.jpg',fit: BoxFit.cover)),
+////               Center (child: new Text('马龙',style: TextStyle(fontSize: 20.0,color: Colors.red))),
+////              new CircleAvatar(backgroundImage: new NetworkImage('http://img5.mtime.cn/mt/2019/07/17/173708.85525823_180X260X4.jpg'),radius: 100.0,)
+////            ],
+////        ),
+//      body: Center(child:stack),
+//      ),
+//    );
+//  }
+//}
+
+//TODO Stack 组件 Positined属性练习
+//import 'package:flutter/material.dart';
+//void main()=>runApp(MyApp());
+//
+//class MyApp extends StatelessWidget{
+//  @override
+//  Widget build(BuildContext context){
+//
+//    var stack = new Stack(
+//      alignment: FractionalOffset(0.5, 0.9),
+//      children: <Widget>[
+//        new CircleAvatar(
+//            backgroundImage: new NetworkImage('http://b-ssl.duitang.com/uploads/item/201801/16/20180116065410_3HEF5.thumb.700_0.jpeg'),
+//            radius: 150.0
+//        ),
+//        new Container(
+//          width: 50.0,
+//          height: 25.0,
+//          alignment: Alignment.center,
+//          decoration: BoxDecoration(color: Colors.red),
+//          padding: EdgeInsets.all(3.0),
+//          child: Text('马龙')
+//        ),
+//        new Positioned(
+//            top: 20.0,
+//            left: 200.0,
+//            child: new RaisedButton(
+//              onPressed: (){
+//
+//              },
+//              child: Text('这是按钮'),
+//              color: Colors.purple,
+//           )
+//        ),
+//        new Positioned(
+//            width: 100.0,
+//            height: 50.0,
+//            child: new Text('这是另一个文字'),
+//            bottom: 120.0,
+//            right: 100.0,
+//        )
+////    Positioned组件的属性
+////    bottom: 距离层叠组件下边的距离
+////    left：距离层叠组件左边的距离
+////    top：距离层叠组件上边的距离
+////    right：距离层叠组件右边的距离
+////    width: 层叠定位组件的宽度
+////    height: 层叠定位组件的高度
+//
+//      ],
+//    );
+//
+//    return MaterialApp(
+//      title: 'Stack 组件 Positined属性练习',
+//      home: Scaffold(
+//        appBar: AppBar(
+//          title: Text('Stack 组件 Positined属性练习'),
+//        ),
+//        body: Center(child: stack)
+//      ),
+//    );
+//  }
+//}
+
+//TODO 卡片组件 布局练习
+import 'package:flutter/material.dart';
+void main()=>runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+
+    var img = 'http://b-ssl.duitang.com/uploads/item/201801/16/20180116065410_3HEF5.thumb.700_0.jpeg';
+
+    var card = new Card(
+      child: new Column(
+        children: <Widget>[
+          new ListTile(
+            title : new Text('大家好，我是来自一个山区的孩子1',style: TextStyle(fontSize: 15.0,color: Colors.lightBlue,backgroundColor: Colors.white)),
+            subtitle: new Text('马龙：18618187729'),
+          ),
+          new Divider(color: Colors.blueAccent),
+          new ListTile(
+              leading: new Image.network(img,width: 50.0,height:50.0,fit: BoxFit.cover,scale: 1.0,),
+              title : new Text('大家好，我是来自一个山区的孩子2',style: TextStyle(fontSize: 15.0,color: Colors.lightGreenAccent,backgroundColor: Colors.black)),
+              subtitle: new Text('马龙：18618187729'),
+          ),
+          new Divider(color: Colors.blueAccent),
+          new ListTile(
+              title : new Text('大家好，我是来自一个山区的孩子3',style: TextStyle(fontSize: 15.0,color: Colors.redAccent,backgroundColor: Colors.white)),
+              subtitle: new Text('马龙：18618187729'),
+          ),
+          new Divider(color: Colors.blueAccent),
+          new ListTile(
+            leading: Icon(Icons.account_balance),
+            title: new Text('大家好，我是来自一个山区的孩子4',style: TextStyle(fontSize: 15.0,color: Colors.white,backgroundColor: Colors.black)),
+            subtitle: new Text('马龙：18618187729'),
+          )
+        ],
+      ),
+    );
+
+
+    return MaterialApp(
+      title: '卡片组件 布局练习',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('卡片组件 布局练习'),
+        ),
+//        body: Center(child:card),
+        body: card,
       ),
     );
   }
