@@ -794,54 +794,140 @@ class MyApp extends StatelessWidget{
 //}
 
 //TODO 卡片组件 布局练习
+//import 'package:flutter/material.dart';
+//void main()=>runApp(MyApp());
+//
+//class MyApp extends StatelessWidget {
+//  @override
+//  Widget build(BuildContext context) {
+//
+//    var img = 'http://b-ssl.duitang.com/uploads/item/201801/16/20180116065410_3HEF5.thumb.700_0.jpeg';
+//
+//    var card = new Card(
+//      child: new Column(
+//        children: <Widget>[
+//          new ListTile(
+//            title : new Text('大家好，我是来自一个山区的孩子1',style: TextStyle(fontSize: 15.0,color: Colors.lightBlue,backgroundColor: Colors.white)),
+//            subtitle: new Text('马龙：18618187729'),
+//          ),
+//          new Divider(color: Colors.blueAccent),
+//          new ListTile(
+//              leading: new Image.network(img,width: 50.0,height:50.0,fit: BoxFit.cover,scale: 1.0,),
+//              title : new Text('大家好，我是来自一个山区的孩子2',style: TextStyle(fontSize: 15.0,color: Colors.lightGreenAccent,backgroundColor: Colors.black)),
+//              subtitle: new Text('马龙：18618187729'),
+//          ),
+//          new Divider(color: Colors.blueAccent),
+//          new ListTile(
+//              title : new Text('大家好，我是来自一个山区的孩子3',style: TextStyle(fontSize: 15.0,color: Colors.redAccent,backgroundColor: Colors.white)),
+//              subtitle: new Text('马龙：18618187729'),
+//          ),
+//          new Divider(color: Colors.blueAccent),
+//          new ListTile(
+//            leading: Icon(Icons.account_balance),
+//            title: new Text('大家好，我是来自一个山区的孩子4',style: TextStyle(fontSize: 15.0,color: Colors.white,backgroundColor: Colors.black)),
+//            subtitle: new Text('马龙：18618187729'),
+//          )
+//        ],
+//      ),
+//    );
+//
+//
+//    return MaterialApp(
+//      title: '卡片组件 布局练习',
+//      home: Scaffold(
+//        appBar: AppBar(
+//          title: Text('卡片组件 布局练习'),
+//        ),
+////        body: Center(child:card),
+//        body: card,
+//      ),
+//    );
+//  }
+//}
+
+//import 'package:flutter/material.dart';
+//void main()=>runApp(MyApp());
+//
+//class MyApp extends StatelessWidget {
+//  @override
+//  Widget build(BuildContext context) {
+//
+//    var img = "http://b-ssl.duitang.com/uploads/item/201801/16/20180116065410_3HEF5.thumb.700_0.jpeg";
+//
+//    var card = new Card(
+//      child: Column(
+//        children: <Widget>[
+//          new ListTile(
+//            title: Text('你好你好你好你好你好'),
+//            leading: new Image.network(img),
+//            subtitle: new Text('哈哈'),
+//          ),
+//          new Divider(
+//            color: Colors.red,
+//          ),
+//          new ListTile(
+//            title: Text('你好你好你好你好你好'),
+//            leading: new Image.network(img),
+//            subtitle: new Text('哈哈'),
+//          ),
+//          new Divider(
+//            color: Colors.red,
+//          ),new ListTile(
+//            title: Text('你好你好你好你好你好'),
+//            leading: new Image.network(img),
+//            subtitle: new Text('哈哈'),
+//          ),
+//          new Divider(
+//            color: Colors.red,
+//          )
+//        ],
+//      )
+//    );
+//
+//    return MaterialApp(
+//      title: '卡片布局',
+//      home: Scaffold(
+//        appBar: AppBar(
+//          title: new Text('卡片卡片布局卡片布局卡片布局卡片布局布局',
+//            textAlign: TextAlign.center,
+//            textDirection: TextDirection.rtl,
+//            overflow: TextOverflow.ellipsis,
+//            style: TextStyle(
+//                fontSize: 22.0,
+//                color: Colors.lightBlue,
+//                backgroundColor: Colors.lightGreenAccent,
+//                decoration: TextDecoration.underline,
+//                decorationStyle: TextDecorationStyle.solid,
+//            )
+//          )
+//        ),
+//        body: Center(
+//          child: card,
+//        ),
+//      ),
+//    );
+//  }
+//}
+
+//todo 这个是加载静态资源和项目图片的方法，在pubspec.yaml文件中配置
 import 'package:flutter/material.dart';
 void main()=>runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
-    var img = 'http://b-ssl.duitang.com/uploads/item/201801/16/20180116065410_3HEF5.thumb.700_0.jpeg';
-
-    var card = new Card(
-      child: new Column(
-        children: <Widget>[
-          new ListTile(
-            title : new Text('大家好，我是来自一个山区的孩子1',style: TextStyle(fontSize: 15.0,color: Colors.lightBlue,backgroundColor: Colors.white)),
-            subtitle: new Text('马龙：18618187729'),
-          ),
-          new Divider(color: Colors.blueAccent),
-          new ListTile(
-              leading: new Image.network(img,width: 50.0,height:50.0,fit: BoxFit.cover,scale: 1.0,),
-              title : new Text('大家好，我是来自一个山区的孩子2',style: TextStyle(fontSize: 15.0,color: Colors.lightGreenAccent,backgroundColor: Colors.black)),
-              subtitle: new Text('马龙：18618187729'),
-          ),
-          new Divider(color: Colors.blueAccent),
-          new ListTile(
-              title : new Text('大家好，我是来自一个山区的孩子3',style: TextStyle(fontSize: 15.0,color: Colors.redAccent,backgroundColor: Colors.white)),
-              subtitle: new Text('马龙：18618187729'),
-          ),
-          new Divider(color: Colors.blueAccent),
-          new ListTile(
-            leading: Icon(Icons.account_balance),
-            title: new Text('大家好，我是来自一个山区的孩子4',style: TextStyle(fontSize: 15.0,color: Colors.white,backgroundColor: Colors.black)),
-            subtitle: new Text('马龙：18618187729'),
-          )
-        ],
-      ),
-    );
-
-
     return MaterialApp(
-      title: '卡片组件 布局练习',
+      title: '引入本地资源文件或图片',
       home: Scaffold(
         appBar: AppBar(
-          title: Text('卡片组件 布局练习'),
+          title: Text('引入本地资源文件或图片'),
         ),
-//        body: Center(child:card),
-        body: card,
+        body: Center(
+          child: Container(
+            child: Image.asset('images/mac.jpeg'),
+          ),
+        ),
       ),
     );
   }
 }
-
